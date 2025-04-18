@@ -13,7 +13,8 @@ test_result = binomtest(k = num_heads, n = n, p = 0.5, alternative= "two-sided")
 
 print(f"P-value: {test_result.pvalue:.4f}")
 
-if test_result.pvalue < 0.05:
+if test_result.pvalue < 0.05:   # 0.05 is the tolerance or significance level
     print("Reject the null hypothesis (coin is likely biased).")
 else:
     print("Failed to reject the null hypothesis (Coin appears fair).")
+
